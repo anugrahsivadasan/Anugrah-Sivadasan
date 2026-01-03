@@ -1,7 +1,7 @@
 import hii from "../assets/Anugrah.jpeg"
 import pallete from "../assets/colorify.png"
 import att from "../assets/dashboard.png"
-import parallax from "../asset/parallax.png"
+import parallax from "../assets/parallax.png"
 import play from "../assets/playstore.png"
 export const projects = [
     {
