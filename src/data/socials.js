@@ -21,6 +21,6 @@ export const socials = [
   {
     name: "Email",
     icon: HiOutlineMail,
-    link: "mailto:youremail@example.com",
+    link: "mailto:anugrahsivadasan@gmail.com",
   },
 ];
