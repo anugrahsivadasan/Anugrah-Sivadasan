@@ -70,7 +70,8 @@ const Hero = () => {
             </a>
 
             <a
-              href="/cv.pdf"
+              href="/Anugrah-Sivadasan-React-Frontend-Developer.pdf
+"
               className="px-6 py-3 rounded-lg border font-medium transition hover:bg-gray-100"
               download
             >
