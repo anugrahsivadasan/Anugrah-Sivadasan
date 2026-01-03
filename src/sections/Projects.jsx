@@ -69,7 +69,7 @@ const Projects = () => {
       {/* CONTENT */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-12 text-center"
+          className="text-3xl md:text-4xl font-bold mb-6 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -77,7 +77,7 @@ const Projects = () => {
         >
           My Projects
         </motion.h2>
-
+       <p className="text-gray-500 text-center mb-6">Tap to view the live preview</p>
         <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
           {projects.map((project, idx) => (
             <ProjectCard key={idx} project={project} />

@@ -4,6 +4,7 @@ import att from "../assets/dashboard.png"
 import parallax from "../assets/parallax.png"
 import play from "../assets/playstore.png"
 import old from "../assets/oldproject.png"
+import ziya from "../assets/ziya.png"
 export const projects = [
     {
       name: "Attendance Dashboard",
@@ -12,6 +13,13 @@ export const projects = [
       image: att,
       link: "https://your-live-link.com/attendance",
     },
+  {
+    name: "Ziya Academy website",
+    description: "Developed a responsive and interactive educational platform in collaboration with a MERN stack team.",
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
+    image:ziya,
+    link: "https://www.ziyaacademy.co.in/",
+  },
   {
     name: "Colorify - Color Palette Generator",
     description: "Generate random color palettes and export HEX/RGB codes and Pick colors from any image and create a palette.",
