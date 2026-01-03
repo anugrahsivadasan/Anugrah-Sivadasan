@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6366f1; /* default indigo */
+  --bg: #ffffff;
+  --text: #0f172a;
+  --card: #f8fafc;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
