@@ -6,12 +6,12 @@ export const socials = [
   {
     name: "GitHub",
     icon: FaGithub, // React component
-    link: "https://github.com/yourusername",
+    link: "https://github.com/anugrahsivadasan",
   },
   {
     name: "LinkedIn",
     icon: FaLinkedin,
-    link: "https://www.linkedin.com/in/yourusername/",
+    link: "https://www.linkedin.com/in/anugrah-sivadasan/",
   },
   {
     name: "Twitter",

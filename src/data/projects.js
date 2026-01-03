@@ -20,7 +20,7 @@ export const projects = [
     link: "https://color-palette-generator-img.vercel.app/",
   },
   {
-    name: "Fanta Websitw",
+    name: "Fanta fancy scrollable Website",
     description: "Created fanta website using smooth scroll animation with the help of GSAP ",
     tech: ["Javascript", "GSAP", "HTML","CSS"],
     image: "https://anugrah-portfolio-xi.vercel.app/static/media/project-img4.1a17ab91f2536f46f044.png",

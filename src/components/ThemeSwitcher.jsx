@@ -1,7 +1,7 @@
 // ThemeSwitcher.jsx
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "../context/ThemeContext";
-import { FiSettings } from "react-icons/fi";
+import { FaPalette } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ThemeSwitcher = () => {
@@ -38,7 +38,7 @@ const ThemeSwitcher = () => {
         className="w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg"
         style={{ backgroundColor: primary }}
       >
-        <FiSettings
+        <FaPalette
           size={22}
           className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}
         />
@@ -80,13 +80,14 @@ const ThemeSwitcher = () => {
   return (
     <motion.div
       initial={false}
-      animate={{
-        top: atHero ? "50%" : "16px",  // vertical: middle in hero, 16px in navbar
-        translateY: atHero ? "-50%" : "0%",
-        left: "16px",                   // always left side
-      }}
-      transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="fixed z-50 flex items-center"
+   animate={{
+  top: atHero ? "50%" : "16px",
+  left: "16px",
+}}
+className={`fixed z-50 flex items-center ${
+  atHero ? "-translate-y-0" : "translate-y-0"
+}`}
+
     >
       {ThemeButton}
     </motion.div>
