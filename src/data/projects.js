@@ -3,6 +3,7 @@ import pallete from "../assets/colorify.png"
 import att from "../assets/dashboard.png"
 import parallax from "../assets/parallax.png"
 import play from "../assets/playstore.png"
+import old from "../assets/oldproject.png"
 export const projects = [
     {
       name: "Attendance Dashboard",
@@ -19,11 +20,18 @@ export const projects = [
     link: "https://color-palette-generator-img.vercel.app/",
   },
   {
+    name: "Fanta Websitw",
+    description: "Created fanta website using smooth scroll animation with the help of GSAP ",
+    tech: ["Javascript", "GSAP", "HTML","CSS"],
+    image: "https://anugrah-portfolio-xi.vercel.app/static/media/project-img4.1a17ab91f2536f46f044.png",
+    link: "https://anugrahsivadasan.github.io/anugrah-fanta/",
+  },
+  {
     name: "Portfolio",
     description: "Created my first portfolio using react",
     tech: ["React", "Tailwind CSS"],
-    image: "/projects/image-picker.png",
-    link: "anugrah-portfolio-xi.vercel.app",
+    image: old,
+    link: "https://anugrah-portfolio-xi.vercel.app/",
   },
   {
     name: "Boat clone",
@@ -39,13 +47,7 @@ export const projects = [
     image: "	https://anugrah-portfolio-xi.vercel.app/static/media/project-img3.ab02719a944b33c3d9bb.png",
     link: "https://anugrahsivadasan.github.io/travelsite_anugrah/",
   },
-  {
-    name: "Attendance Dashboard",
-    description: "Created fanta website using smooth scroll animation with the help of GSAP ",
-    tech: ["Javascript", "GSAP", "HTML","CSS"],
-    image: "https://anugrah-portfolio-xi.vercel.app/static/media/project-img4.1a17ab91f2536f46f044.png",
-    link: "https://anugrahsivadasan.github.io/anugrah-fanta/",
-  },
+  
   {
     name: "Parallax website",
     description: "Created fanta website using smooth scroll animation with the help of GSAP ",

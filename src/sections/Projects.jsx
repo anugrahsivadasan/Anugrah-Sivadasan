@@ -15,8 +15,8 @@ import {
 const floatingIcons = [
   { Icon: FaReact, x: "10%", y: "20%", size: 42, speed: 1 },
   { Icon: FaCode, x: "85%", y: "15%", size: 34, speed: 0.7 },
-  { Icon: FaLayerGroup, x: "70%", y: "75%", size: 38, speed: 1.1 },
-  { Icon: FaRocket, x: "20%", y: "80%", size: 36, speed: 0.9 },
+  { Icon: FaLayerGroup, x: "70%", y: "95%", size: 38, speed: 1.1 },
+  { Icon: FaRocket, x: "15%", y: "80%", size: 36, speed: 0.9 },
   { Icon: FaCogs, x: "50%", y: "45%", size: 30, speed: 0.6 },
 ];
 
