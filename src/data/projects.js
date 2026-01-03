@@ -14,7 +14,7 @@ export const projects = [
     description: "Generate random color palettes and export HEX/RGB codes and Pick colors from any image and create a palette.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     image:pallete,
-    link: "https://your-live-link.com/colorify",
+    link: "https://color-palette-generator-img.vercel.app/",
   },
   {
     name: "Image Palette Picker",
