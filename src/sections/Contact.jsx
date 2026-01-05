@@ -101,15 +101,15 @@ const Contact = () => {
         {/* CTA BUTTONS */}
         <div className="flex justify-center gap-6 mb-10 flex-wrap">
           <a
-            href="mailto:anugrahsivadasan@gmail.com"
-            className="px-6 py-3 rounded-lg text-white font-medium transition hover:opacity-90"
-            style={{ backgroundColor: primary }}
-          >
-            Hire Me
-          </a>
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=anugrahsivadasan@gmail.com"
+  className="px-6 py-3 rounded-lg text-white font-medium transition hover:opacity-90"
+  style={{ backgroundColor: primary }}
+>
+  Hire Me
+</a>
 
           <a
-            href="/Anugrah-Sivadasan-React-Frontend-Developer.pdf"
+            href="/Anugrah-Sivadasan-React-Resume.pdf"
             className="px-6 py-3 rounded-lg border font-medium transition hover:bg-gray-100"
             download
           >

@@ -13,14 +13,10 @@ export const socials = [
     icon: FaLinkedin,
     link: "https://www.linkedin.com/in/anugrah-sivadasan/",
   },
-  {
-    name: "Twitter",
-    icon: FaTwitter,
-    link: "https://twitter.com/yourusername",
-  },
+ 
   {
     name: "Email",
     icon: HiOutlineMail,
-    link: "mailto:anugrahsivadasan@gmail.com",
+    link: "https://mail.google.com/mail/?view=cm&fs=1&to=anugrahsivadasan@gmail.com",
   },
 ];

@@ -9,7 +9,6 @@ const COLORS = {
   amber: "#f59e0b",
   sky: "#0ea5e9",
   brown: "#5E3F2B",
-  pink:"#BDFE3A",
 };
 
 export const ThemeProvider = ({ children }) => {
