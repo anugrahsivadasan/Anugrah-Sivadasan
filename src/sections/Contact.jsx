@@ -1,28 +1,105 @@
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef } from "react";
 import SocialButton from "../components/SocialButtons";
 import { socials } from "../data/socials";
-import { motion } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaPaperPlane,
+  FaUserTie,
+} from "react-icons/fa";
+
+/* FLOATING ICONS */
+const floatingIcons = [
+  { Icon: FaEnvelope, left: "12%", top: "25%", size: 38, depth: 80 },
+  { Icon: FaPaperPlane, left: "85%", top: "30%", size: 34, depth: 65 },
+  { Icon: FaPhoneAlt, left: "70%", top: "80%", size: 36, depth: 95 },
+  { Icon: FaUserTie, left: "15%", top: "75%", size: 40, depth: 110 },
+];
 
 const Contact = () => {
   const { primary } = useTheme();
+  const sectionRef = useRef(null);
+
+  /* 🎯 SECTION SCROLL */
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  /* 🧈 SMOOTH SPRING */
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 55,
+    damping: 20,
+    mass: 0.6,
+  });
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section
+      ref={sectionRef}
+      id="contact"
+      className="relative py-28 overflow-hidden bg-white"
+    >
+      {/* 🌈 GRADIENT BACKGROUND */}
+      <motion.div
+        className="absolute inset-0 -z-10"
+        style={{
+          background: `
+            radial-gradient(circle at 20% 30%, ${primary}22, transparent 55%),
+            radial-gradient(circle at 80% 75%, ${primary}18, transparent 55%)
+          `,
+        }}
+      />
+
+      {/* 🧩 FLOATING ICONS */}
+      {floatingIcons.map((item, index) => {
+        const y = useTransform(
+          smoothProgress,
+          [0, 1],
+          [0, -item.depth]
+        );
+
+        return (
+          <motion.div
+            key={index}
+            className="absolute pointer-events-none opacity-[0.14]"
+            style={{
+              left: item.left,
+              top: item.top,
+              y,
+              color: primary,
+            }}
+          >
+            <item.Icon size={item.size} />
+          </motion.div>
+        );
+      })}
+
+      {/* 📦 CONTENT */}
+      <div className="relative max-w-4xl mx-auto px-6 text-center">
         <motion.h2
           className="text-3xl md:text-4xl font-bold mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           Get in Touch
         </motion.h2>
 
-        <p className="text-gray-600 mb-8">
+        <motion.p
+          className="text-gray-600 mb-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
           Interested in working together? Feel free to reach out!
-        </p>
+        </motion.p>
 
-        <div className="flex justify-center gap-6 mb-8 flex-wrap">
+        {/* CTA BUTTONS */}
+        <div className="flex justify-center gap-6 mb-10 flex-wrap">
           <a
             href="mailto:anugrahsivadasan@gmail.com"
             className="px-6 py-3 rounded-lg text-white font-medium transition hover:opacity-90"
@@ -32,8 +109,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="/Anugrah-Sivadasan-React-Frontend-Developer.pdf
-"
+            href="/Anugrah-Sivadasan-React-Frontend-Developer.pdf"
             className="px-6 py-3 rounded-lg border font-medium transition hover:bg-gray-100"
             download
           >
@@ -41,6 +117,7 @@ const Contact = () => {
           </a>
         </div>
 
+        {/* SOCIALS */}
         <div className="flex justify-center gap-4 flex-wrap">
           {socials.map((social, idx) => (
             <SocialButton key={idx} social={social} />
