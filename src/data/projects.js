@@ -6,20 +6,20 @@ import play from "../assets/playstore.png"
 import old from "../assets/oldproject.png"
 import ziya from "../assets/ziya.png"
 export const projects = [
-    {
-      name: "Attendance Dashboard",
-      description: "Developed employee attendance dashboard with a chatbot-enabled  that contains 25+ pages and 50+ features.",
-      tech: ["React", "Tailwind CSS", "Framer Motion","Rest API"],
-      image: att,
-      link: "https://your-live-link.com/attendance",
-    },
-  {
-    name: "Ziya Academy website",
-    description: "Developed a responsive and interactive educational platform in collaboration with a MERN stack team.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    image:ziya,
-    link: "https://www.ziyaacademy.co.in/",
-  },
+  //   {
+  //     name: "Attendance Dashboard",
+  //     description: "Developed employee attendance dashboard with a chatbot-enabled  that contains 25+ pages and 50+ features.",
+  //     tech: ["React", "Tailwind CSS", "Framer Motion","Rest API"],
+  //     image: att,
+  //     link: "https://your-live-link.com/attendance",
+  //   },
+  // {
+  //   name: "Ziya Academy website",
+  //   description: "Developed a responsive and interactive educational platform in collaboration with a MERN stack team.",
+  //   tech: ["React", "Tailwind CSS", "Framer Motion"],
+  //   image:ziya,
+  //   link: "https://www.ziyaacademy.co.in/",
+  // },
   {
     name: "Colorify - Color Palette Generator",
     description: "Generate random color palettes and export HEX/RGB codes and Pick colors from any image and create a palette.",
