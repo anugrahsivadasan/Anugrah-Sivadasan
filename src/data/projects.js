@@ -1,10 +1,10 @@
 import hii from "../assets/Anugrah.jpeg"
 import pallete from "../assets/colorify.png"
-import att from "../assets/dashboard.png"
 import parallax from "../assets/parallax.png"
 import play from "../assets/playstore.png"
 import old from "../assets/oldproject.png"
-import ziya from "../assets/ziya.png"
+// import ziya from "../assets/ziya.png"
+// import att from "../assets/dashboard.png"
 export const projects = [
   //   {
   //     name: "Attendance Dashboard",
