@@ -32,12 +32,12 @@ const sectionVariants = {
 const App = () => {
   return (
     <>
-      <Navbar />
             <ThemeSwitcher /> {/* floating button slides from hero left → navbar top-left */}
+      <Navbar />
 
       <ScrollProgress />
 
-      <main className="overflow-hidden">
+      <main className="overflow-hidden text-gray-900 dark:bg-black ">
         <motion.section
           variants={sectionVariants}
           initial="hidden"

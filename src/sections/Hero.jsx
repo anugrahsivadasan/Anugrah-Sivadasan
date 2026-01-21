@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden bg-gray-50"
+      className="min-h-screen flex items-center justify-center px-6 relative overflow-hiddenbg-white text-gray-900 dark:bg-black dark:text-gray-100"
     >
       {/* FLOATING ICONS BACKGROUND */}
       {floatingIcons.map((item, index) => {
@@ -59,6 +59,8 @@ const Hero = () => {
           <p className="mt-4 text-lg text-gray-600">
             Frontend React Developer crafting clean and interactive web experiences.
           </p>
+
+          
 
           <div className="mt-6 flex gap-4">
             <a

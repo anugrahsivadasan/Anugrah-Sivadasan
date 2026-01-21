@@ -12,6 +12,7 @@ const COLORS = {
 };
 
 export const ThemeProvider = ({ children }) => {
+  /* ---------- COLOR THEME ---------- */
   const [primary, setPrimary] = useState(
     localStorage.getItem("theme-color") || COLORS.indigo
   );
@@ -21,8 +22,38 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem("theme-color", primary);
   }, [primary]);
 
+  /* ---------- DARK / LIGHT MODE (FIXED) ---------- */
+  const [theme, setTheme] = useState(() => {
+    // 1️⃣ Check localStorage first
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) return savedTheme;
+
+    // 2️⃣ Fallback to system preference
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  });
+
+  // Apply dark class whenever theme changes
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
   return (
-    <ThemeContext.Provider value={{ primary, setPrimary, COLORS }}>
+    <ThemeContext.Provider
+      value={{
+        primary,
+        setPrimary,
+        COLORS,
+        theme,
+        toggleTheme,
+      }}
+    >
       {children}
     </ThemeContext.Provider>
   );

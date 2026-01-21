@@ -9,7 +9,7 @@ const ServiceCard = ({ service }) => {
 
   return (
     <motion.div
-      className="bg-white rounded-xl p-6 text-center cursor-pointer transition-all duration-300"
+      className="bg-white rounded-xl p-6 text-center cursor-pointer transition-all duration-300 text-gray-900 dark:bg-black dark:text-gray-100"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -31,7 +31,7 @@ const ServiceCard = ({ service }) => {
       </div>
 
       <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-      <p className="text-gray-600">{service.description}</p>
+      <p className="text-gray-600 dark:text-gray-500">{service.description}</p>
     </motion.div>
   );
 };

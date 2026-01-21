@@ -37,7 +37,7 @@ const SoftSkills = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-28 overflow-hidden bg-white"
+      className="relative py-28 overflow-hidden bg-white text-gray-900 dark:bg-black dark:text-gray-100"
     >
       {/* 🌈 PARALLAX BACKGROUND */}
       <motion.div

@@ -27,7 +27,7 @@ const About = () => {
   const springConfig = { damping: 20, stiffness: 80 };
 
   return (
-    <section id="about" className="relative py-32 overflow-hidden bg-gray-50">
+    <section id="about" className="relative py-32 overflow-hidden bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100">
       
       {/* FLOATING ICONS BACKGROUND */}
       {floatingIcons.map((item, index) => {
@@ -70,7 +70,7 @@ const About = () => {
 
         {/* TEXT CARD */}
         <motion.div
-          className="flex-1 bg-white/80 backdrop-blur-md p-8 rounded-2xl"
+          className="flex-1 bg-white/80 backdrop-blur-md p-8 rounded-2xl text-gray-900 dark:bg-gray-900 dark:text-gray-100"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -82,7 +82,7 @@ const About = () => {
           >
             {aboutMe.title}
           </h2>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed dark:text-gray-200">
             {aboutMe.description}
           </p>
         </motion.div>

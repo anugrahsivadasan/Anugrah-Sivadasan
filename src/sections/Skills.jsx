@@ -38,7 +38,7 @@ const Skills = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className="relative py-28 overflow-hidden bg-gray-50"
+      className="relative py-28 overflow-hidden bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100"
     >
       {/* 🌈 PRIMARY GRADIENT BACKGROUND */}
       <motion.div

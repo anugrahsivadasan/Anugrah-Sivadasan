@@ -48,7 +48,7 @@ const Experience = () => {
     <section
       ref={sectionRef}
       id="experience"
-      className="relative py-24 bg-gray-50 overflow-hidden"
+      className="relative py-24 bg-gray-50 overflow-hidden text-gray-900 dark:bg-black dark:text-gray-100"
     >
       {/* 🌊 PARALLAX ICONS */}
       {floatingIcons.map((item, index) => {
