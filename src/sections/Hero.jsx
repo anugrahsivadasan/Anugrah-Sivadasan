@@ -47,7 +47,7 @@ const Hero = () => {
 
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* LEFT CONTENT */}
-        <motion.div
+        <motion.div  
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

@@ -11,6 +11,7 @@ import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 import ScrollProgress from "./components/ScrollProgress";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+import FeaturesSection from "./sections/Features";
 
 /* ------------------ VARIANTS ------------------ */
 
@@ -56,6 +57,34 @@ const App = () => {
           <About />
         </motion.section>
 
+        
+        <motion.section
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <Services />
+        </motion.section>
+
+         <motion.section
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <Projects />
+        </motion.section>
+
+        <motion.section
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <FeaturesSection />
+        </motion.section>
+
         <motion.section
           variants={sectionVariants}
           initial="hidden"
@@ -74,14 +103,7 @@ const App = () => {
           <SoftSkills />
         </motion.section>
 
-        <motion.section
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-        >
-          <Projects />
-        </motion.section>
+       
 
         <motion.section
           variants={sectionVariants}
@@ -92,14 +114,6 @@ const App = () => {
           <Experience />
         </motion.section>
 
-        <motion.section
-          variants={sectionVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-        >
-          <Services />
-        </motion.section>
 
         <motion.section
           variants={sectionVariants}

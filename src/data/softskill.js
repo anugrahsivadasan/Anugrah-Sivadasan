@@ -31,3 +31,5 @@ export const softSkill = [
   { name: "Task Handling", icon: FaTasks },
   { name: "Team Collaboration", icon: FaUsers },
 ];
+
+

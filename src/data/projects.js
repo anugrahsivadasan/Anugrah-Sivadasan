@@ -56,13 +56,13 @@ export const projects = [
     link: "https://anugrahsivadasan.github.io/travelsite_anugrah/",
   },
   
-  {
-    name: "Parallax website",
-    description: "Created fanta website using smooth scroll animation with the help of GSAP ",
-    tech: ["Javascript", "GSAP", "HTML","CSS"],
-    image: parallax,
-    link: "https://anugrahsivadasan.github.io/parallax/",
-  },
+  // {
+  //   name: "Parallax website",
+  //   description: "Created fanta website using smooth scroll animation with the help of GSAP ",
+  //   tech: ["Javascript", "GSAP", "HTML","CSS"],
+  //   image: parallax,
+  //   link: "https://anugrahsivadasan.github.io/parallax/",
+  // },
   {
     name: "Google Play Store Clone",
     description: "Created fanta website using smooth scroll animation with the help of GSAP ",
