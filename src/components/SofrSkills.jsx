@@ -21,13 +21,11 @@ const SoftSkills = () => {
   const { primary } = useTheme();
   const sectionRef = useRef(null);
 
-  /* 🎯 SECTION-BASED SCROLL */
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
   });
 
-  /* 🧈 SMOOTH SPRING */
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 55,
     damping: 20,
@@ -37,7 +35,7 @@ const SoftSkills = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-28 overflow-hidden bg-white text-gray-900 dark:bg-black dark:text-gray-100"
+      className="relative py-16 md:py-28 overflow-hidden bg-white text-gray-900 dark:bg-black dark:text-gray-100"
     >
       {/* 🌈 PARALLAX BACKGROUND */}
       <motion.div
@@ -50,34 +48,32 @@ const SoftSkills = () => {
         }}
       />
 
-      {/* 🧩 FLOATING ICONS */}
-      {floatingIcons.map((item, index) => {
-        const y = useTransform(
-          smoothProgress,
-          [0, 1],
-          [0, -item.depth]
-        );
+      {/* 🧩 FLOATING ICONS (Desktop Only) */}
+      <div className="hidden md:block">
+        {floatingIcons.map((item, index) => {
+          const y = useTransform(smoothProgress, [0, 1], [0, -item.depth]);
 
-        return (
-          <motion.div
-            key={index}
-            className="absolute pointer-events-none opacity-[0.14]"
-            style={{
-              left: item.left,
-              top: item.top,
-              y,
-              color: primary,
-            }}
-          >
-            <item.Icon size={item.size} />
-          </motion.div>
-        );
-      })}
+          return (
+            <motion.div
+              key={index}
+              className="absolute pointer-events-none opacity-[0.14]"
+              style={{
+                left: item.left,
+                top: item.top,
+                y,
+                color: primary,
+              }}
+            >
+              <item.Icon size={item.size} />
+            </motion.div>
+          );
+        })}
+      </div>
 
       {/* 📦 CONTENT */}
-      <div className="relative max-w-6xl mx-auto px-6">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-16 text-center"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 md:mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -86,8 +82,34 @@ const SoftSkills = () => {
           Other Skills
         </motion.h2>
 
-        {/* SKILLS LIST */}
-        <div className="flex flex-wrap justify-center gap-8">
+        {/* ================= MOBILE VIEW (UPDATED) ================= */}
+        <div className="grid grid-cols-2 gap-y-6 gap-x-4 md:hidden">
+          {softSkill.map((skill, index) => {
+            const Icon = skill.icon;
+
+            return (
+              <motion.div
+                key={index}
+                className="flex items-center gap-3"
+                whileTap={{ scale: 0.95 }}
+              >
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center shadow-sm"
+                  style={{ backgroundColor: primary }}
+                >
+                  <Icon size={18} className="text-white" />
+                </div>
+
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  {skill.name}
+                </span>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* ================= DESKTOP VIEW ================= */}
+        <div className="hidden md:flex flex-wrap justify-center gap-8">
           {softSkill.map((skill, index) => {
             const Icon = skill.icon;
 
@@ -105,7 +127,7 @@ const SoftSkills = () => {
                   <Icon size={22} className="text-white" />
                 </div>
 
-                <span className="text-gray-700 font-medium">
+                <span className="text-gray-700 dark:text-gray-300 font-medium">
                   {skill.name}
                 </span>
               </motion.div>
