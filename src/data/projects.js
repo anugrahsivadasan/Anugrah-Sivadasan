@@ -4,15 +4,23 @@ import parallax from "../assets/parallax.png"
 import play from "../assets/playstore.png"
 import old from "../assets/oldproject.png"
 import ziya from "../assets/ziya.png"
+import slams from "../assets/slams.png"
 // import att from "../assets/dashboard.png"
 export const projects = [
   //   {
   //     name: "Attendance Dashboard",
-  //     description: "Developed employee attendance dashboard with a chatbot-enabled  that contains 25+ pages and 50+ features.",
+  //     description: "Developed employee attendance dashboard with a chatbot-enabled  that contains 25+ pages and 50+ features.", (add this project with no link and add confidential project with a blur image effect)
   //     tech: ["React", "Tailwind CSS", "Framer Motion","Rest API"],
   //     image: att,
   //     link: "https://your-live-link.com/attendance",
   //   },
+  {
+    name: "Slams Tech Website",
+description: "Built a responsive and visually dynamic IT company website featuring smooth animations and a modern design to highlight services and company expertise.",  
+  tech: ["React", "Tailwind CSS", "Framer Motion","GSAP","parallax effect","clip-path animation"],
+    image:slams,
+    link: "https://slamstech.com/",
+  },
   {
     name: "Ziya Academy website",
     description: "Developed a responsive and interactive educational platform in collaboration with a MERN stack team.",
