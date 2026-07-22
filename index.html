@@ -1,31 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Anugrah Sivadasan",
-  "alternateName": "Anugrah Sivadasan Portfolio",
-  "url": "https://anugrah-sivadasan.vercel.app/"
-}
-</script>
-
-
     <meta charset="UTF-8" />
 
     <!-- Mobile SEO -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Title -->
-    <title>Anugrah Sivadasan | React Frontend Developer</title>
+    <!-- SEO Title: name + role + location, this is what shows in the search result -->
+    <title>Anugrah Sivadasan | Freelance React Developer in Kerala, India</title>
 
-    <!-- SEO Description -->
+    <!-- SEO Description: includes the exact phrases people search for -->
     <meta
       name="description"
-      content="Anugrah Sivadasan is a React Frontend Developer specializing in modern, responsive web applications using React, JavaScript, and Tailwind CSS."
+      content="Anugrah Sivadasan is a freelance React frontend developer based in Ernakulam, Kerala, building modern, responsive web applications with React, JavaScript, and Tailwind CSS for clients across India."
     />
+
+    <!-- Extra keyword hints (low weight for Google now, but harmless and used by some search engines) -->
+    <meta
+      name="keywords"
+      content="react developer, freelance web developer kerala, freelance web developer Ernakulam, react frontend developer india"
+    />
+    <meta name="author" content="Anugrah Sivadasan" />
+    <link rel="canonical" href="https://anugrah-sivadasan.vercel.app/" />
 
     <!-- Google Verification -->
     <meta
@@ -34,24 +30,59 @@
     />
 
     <!-- Open Graph (Social Preview) -->
-    <meta property="og:title" content="Anugrah Sivadasan | React Frontend Developer" />
+    <meta property="og:title" content="Anugrah Sivadasan | Freelance React Developer in Kerala" />
     <meta
       property="og:description"
-      content="React developer portfolio showcasing projects, skills, and experience."
+      content="Freelance React frontend developer based in Ernakulam, Kerala — portfolio showcasing projects, skills, and experience."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://anugrah-sivadasan.vercel.app/" />
     <meta property="og:image" content="https://anugrah-sivadasan.vercel.app/Anugrah.jpeg" />
     <meta property="og:site_name" content="Anugrah Sivadasan" />
 
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anugrah Sivadasan | Freelance React Developer in Kerala" />
+    <meta
+      name="twitter:description"
+      content="Freelance React frontend developer based in Ernakulam, Kerala — portfolio showcasing projects, skills, and experience."
+    />
+    <meta name="twitter:image" content="https://anugrah-sivadasan.vercel.app/Anugrah.jpeg" />
 
     <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="/Anugrah.jpeg"
-      sizes="512x512"
-    />
+    <link rel="icon" type="image/jpeg" href="/Anugrah.jpeg" sizes="512x512" />
+
+    <!--
+      Structured data: Person schema.
+      This is what tells Google "this is a person, this is their job,
+      this is where they're based" — it directly supports ranking for
+      role + location searches, not just name searches.
+
+      TODO: replace the sameAs URLs below with your real GitHub/LinkedIn
+      (and Twitter/X, Instagram, etc. if you have them). More real,
+      active profiles listed here = stronger signal.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Anugrah Sivadasan",
+      "alternateName": "Anugrah Sivadasan Portfolio",
+      "jobTitle": "Freelance React Frontend Developer",
+      "url": "https://anugrah-sivadasan.vercel.app/",
+      "image": "https://anugrah-sivadasan.vercel.app/Anugrah.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ernakulam",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://github.com/YOUR-GITHUB-USERNAME",
+        "https://linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+      ]
+    }
+    </script>
   </head>
 
   <body>

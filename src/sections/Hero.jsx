@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-6 relative overflow-hiddenbg-white text-gray-900 dark:bg-black dark:text-gray-100"
+      className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden bg-white text-gray-900 dark:bg-black dark:text-gray-100"
     >
       {/* FLOATING ICONS BACKGROUND */}
       {floatingIcons.map((item, index) => {
@@ -47,20 +47,29 @@ const Hero = () => {
 
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* LEFT CONTENT */}
-        <motion.div  
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-7xl font-bold leading-tight">
-            Hi, I’m <span style={{ color: "var(--primary)" }}>Anugrah</span>
+          {/*
+            H1 rewritten so the page's own visible text matches what
+            people actually search for. Meta tags alone (in index.html)
+            tell Google what the page is about, but Google weighs the
+            text on the page itself even more heavily — so the role and
+            location need to show up here too, in plain language.
+          */}
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Hi, I&rsquo;m <span style={{ color: "var(--primary)" }}>Anugrah</span>
+            <br />
+            Freelance React Developer
           </h1>
 
-          <p className="mt-4 text-lg text-gray-600">
-            Frontend React Developer crafting clean and interactive web experiences.
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+            I&rsquo;m a freelance web developer based in Kannur, Kerala,
+            building clean, responsive React applications and modern
+            websites for clients across India.
           </p>
-
-          
 
           <div className="mt-6 flex gap-4">
             <a
@@ -72,9 +81,8 @@ const Hero = () => {
             </a>
 
             <a
-              href="/Anugrah-Sivadasan-React-Resume.pdf
-"
-              className="px-6 py-3 rounded-lg border font-medium transition hover:bg-gray-100"
+              href="/Anugrah-Sivadasan-React-Resume.pdf"
+              className="px-6 py-3 rounded-lg border font-medium transition hover:bg-gray-100 dark:hover:bg-gray-800"
               download
             >
               Download CV
@@ -101,7 +109,7 @@ const Hero = () => {
           >
             <img
               src={profileImg}
-              alt="Profile"
+              alt="Anugrah Sivadasan, freelance React developer based in Kerala, India"
               className="w-80 h-80 rounded-full object-cover"
             />
           </div>

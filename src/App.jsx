@@ -12,6 +12,7 @@ import Contact from "./sections/Contact";
 import ScrollProgress from "./components/ScrollProgress";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import FeaturesSection from "./sections/Features";
+import Footer from "./components/Footer";
 
 /* ------------------ VARIANTS ------------------ */
 
@@ -122,6 +123,15 @@ const App = () => {
           viewport={{ once: false, amount: 0.2 }}
         >
           <Contact />
+        </motion.section>
+
+        <motion.section
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          <Footer />
         </motion.section>
       </main>
     </>

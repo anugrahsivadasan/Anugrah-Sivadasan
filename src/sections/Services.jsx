@@ -74,7 +74,7 @@ const Services = () => {
       {/* CONTENT */}
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-12 text-center"
+          className="text-3xl md:text-4xl font-bold mb-6 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -82,6 +82,12 @@ const Services = () => {
         >
           My Services
         </motion.h2>
+
+        <motion.p 
+        className="text-sm md:text-2xl text-gray-400 mb-6 text-center"
+        >
+          Helping businesses in Kannur, Ernakulam, Kochi, and across Kerala build high-performance websites and React applications.
+        </motion.p>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           {services.map((service, idx) => (
