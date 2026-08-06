@@ -1,10 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -49,7 +44,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .8 }}
+          transition={{ duration: 0.8 }}
           className="grid md:grid-cols-3 gap-12"
         >
           {/* LEFT */}
@@ -62,12 +57,12 @@ const Footer = () => {
             </h2>
 
             <p className="mt-5 leading-8 text-gray-600 dark:text-gray-400">
-              Freelance React Developer helping businesses in
+              Freelance web developer helping businesses in
               <span className="font-semibold"> Kannur</span>,
               <span className="font-semibold"> Ernakulam</span>,
               <span className="font-semibold"> Kochi</span> and across
               <span className="font-semibold"> Kerala</span> build modern,
-              responsive websites and web applications.
+              responsive websites and performance-focused web applications.
             </p>
           </div>
 
@@ -97,9 +92,7 @@ const Footer = () => {
 
           {/* RIGHT */}
           <div>
-            <h3 className="text-xl font-semibold mb-5">
-              Let's Connect
-            </h3>
+            <h3 className="text-xl font-semibold mb-5">Let's Connect</h3>
 
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               Available for freelance projects and full-time opportunities.
@@ -153,7 +146,7 @@ const Footer = () => {
           </p>
 
           <p className="text-sm text-gray-500 text-center md:text-right">
-            React Developer • Kannur • Ernakulam • Kochi • Kerala • India
+            Web Developer • Kerala • Kannur • Ernakulam • Kochi • India
           </p>
         </div>
       </div>

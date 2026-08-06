@@ -5,6 +5,7 @@ import play from "../assets/playstore.png"
 import old from "../assets/oldproject.png"
 import ziya from "../assets/ziya.png"
 import slams from "../assets/slams.png"
+import krieto from "../assets/krieto.png"
 // import att from "../assets/dashboard.png"
 export const projects = [
   //   {
@@ -21,6 +22,22 @@ description: "Built a responsive and visually dynamic IT company website featuri
     image:slams,
     link: "https://slamstech.com/",
   },
+{
+  name: "Krieto Digital Agency",
+  description:
+    "Developed a premium marketing agency website with responsive design, smooth animations, and SEO optimization.",
+  tech: [
+    "React",
+    "Tailwind CSS",
+    "TypeScript",
+    
+    "Google Apps Script",
+    "Google Sheets API",
+   
+  ],
+  image: krieto,
+  link: "https://krieto.co/",
+},
   {
     name: "Ziya Academy website",
     description: "Developed a responsive and interactive educational platform in collaboration with a MERN stack team.",

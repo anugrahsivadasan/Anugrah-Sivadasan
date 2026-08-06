@@ -1,8 +1,14 @@
 // src/sections/Hero.jsx
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import ThemeSwitcher from "../components/ThemeSwitcher";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import {
+  FaBolt,
+  FaCode,
+  FaLaptopCode,
+  FaPalette,
+  FaReact,
+} from "react-icons/fa";
 import profileImg from "../assets/Anugrah.jpeg";
-import { FaReact, FaCode, FaPalette, FaLaptopCode, FaBolt } from "react-icons/fa";
+import ThemeSwitcher from "../components/ThemeSwitcher";
 
 const floatingIcons = [
   { Icon: FaReact, x: "5%", y: "10%", size: 40, speed: 0.6 },
@@ -37,10 +43,7 @@ const Hero = () => {
               y,
             }}
           >
-            <item.Icon
-              size={item.size}
-              style={{ color: "var(--primary)" }}
-            />
+            <item.Icon size={item.size} style={{ color: "var(--primary)" }} />
           </motion.div>
         );
       })}
@@ -60,15 +63,17 @@ const Hero = () => {
             location need to show up here too, in plain language.
           */}
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Hi, I&rsquo;m <span style={{ color: "var(--primary)" }}>Anugrah</span>
+            Hi, I&rsquo;m{" "}
+            <span style={{ color: "var(--primary)" }}>Anugrah</span>
             <br />
-            Freelance React Developer
+            Freelance Web Developer
           </h1>
 
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
             I&rsquo;m a freelance web developer based in Kannur, Kerala,
-            building clean, responsive React applications and modern
-            websites for clients across India.
+            creating responsive websites, modern React web apps, and
+            SEO-friendly digital experiences for businesses across Kerala and
+            India.
           </p>
 
           <div className="mt-6 flex gap-4">
@@ -109,7 +114,7 @@ const Hero = () => {
           >
             <img
               src={profileImg}
-              alt="Anugrah Sivadasan, freelance React developer based in Kerala, India"
+              alt="Anugrah Sivadasan, freelance web developer based in Kerala, India"
               className="w-80 h-80 rounded-full object-cover"
             />
           </div>
